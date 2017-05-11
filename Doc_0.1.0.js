@@ -1,13 +1,12 @@
 /**
- * @api{get}/place Pobieranie miejsca
+ * @api{get}/place Get place
  * @apiName GetPlace
  * @apiGroup User
  * @apiVersion 0.1.0
- * @apiParam {String} type Typ.
+ * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.
- * @apiParam {String} place Miejsce.
- * @apiSuccess {String} placeInfo Informacja o miejscu.
- * @apiSuccessExample Przykład: Dane w przypadku powodzenia:
+ * @apiParam {String} place Place.
+ * @apiSuccessExample Example: Data in case of success:
 {
 	"namespace": 
 		{
@@ -49,14 +48,13 @@
  */
  
  /**
- * @api{get}/place Pobieranie namespace
+ * @api{get}/place Get namespace
  * @apiName GetNamespace
  * @apiGroup User
  * @apiVersion 0.1.0
- * @apiParam {String} type Typ.
+ * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.
- * @apiSuccess {String} placeInfo Informacja o namespace.
- * @apiSuccessExample Przykład: Dane w przypadku powodzenia:
+ * @apiSuccessExample Example: Data in case of success:
 {
 	"namespace": 
 		{
