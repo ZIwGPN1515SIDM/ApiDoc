@@ -78,7 +78,7 @@
  */
  
  /**
- * @api{get}/v2/place/category Get place of given category
+ * @api{get}/v2/place/category Get place with given category
  * @apiName GetPlaceWithCategory
  * @apiGroup User
  * @apiVersion 0.2.0

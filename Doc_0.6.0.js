@@ -2,7 +2,7 @@
  * @api{get}/v2/place Get place
  * @apiName GetPlace
  * @apiGroup User
- * @apiVersion 0.4.0
+ * @apiVersion 0.6.0
  * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.
  * @apiParam {String} place Place.
@@ -34,8 +34,8 @@
 					"ID": 1,
 					"URL": "http://i.imgur.com/bgRtGjJ.jpg",
 					"NAMESPACE_ID": 1
-				},	
-				(…)
+				},
+			(…)
 			],
 		},
 	"place": 
@@ -68,7 +68,7 @@
  * @api{get}/v2/place Get namespace
  * @apiName GetNamespace
  * @apiGroup User
- * @apiVersion 0.4.0
+ * @apiVersion 0.6.0
  * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.
  * @apiSuccessExample Example: Data in case of success:
@@ -110,7 +110,7 @@
  * @api{get}/v2/place/category Get place with given category
  * @apiName GetPlaceWithCategory
  * @apiGroup User
- * @apiVersion 0.4.0
+ * @apiVersion 0.6.0
  * @apiParam {String} type Type.
  * @apiParam {Number} category Category id.
  * @apiParam {Number} limit Limit (optional).
@@ -156,8 +156,8 @@
  * @api{get}/v2/place/category Get category list
  * @apiName GetCategoryList
  * @apiGroup User
- * @apiVersion 0.4.0
- * @apiSuccessExample Example: Data in case of success:
+ * @apiVersion 0.6.0
+ * @apiSuccessExample Example: Data in case with success:
 JSON
 {
 	"categories": [
@@ -181,7 +181,7 @@ JSON
  * @api{get}/v2/place/namespace Get place with given namespace
  * @apiName GetPlaceWithNamespace
  * @apiGroup User
- * @apiVersion 0.4.0
+ * @apiVersion 0.6.0
  * @apiParam {String} type Type.
  * @apiParam {Number} namespaceid Namespace id.
  * @apiParam {Number} limit Limit (optional).
@@ -215,4 +215,59 @@ JSON
 }
  */
  
+   /**
+ * @api{get}/v2/place/event Get events from namespace and its places
+ * @apiName GetEventsFromNamespace
+ * @apiGroup User
+ * @apiVersion 0.6.0
+ * @apiParam {String} type Type.
+ * @apiParam {Number} namespaceid Namespace id.
+ * @apiSuccessExample Example: Data in case of success:
+{
+	"namespace": 
+		{
+			"ID": 1,
+			"NAME": "12341234",
+			"EVENT_CONTENT": null,
+			"EVENT_END": null
+		},
+	"places": [ 
+		{
+			"ID": 1,
+			"NAME": "ABCDEFG",
+			"EVENT_CONTENT": null,
+			"EVENT_END": null
+		},  
+		{
+			"ID": 3,
+			"NAME": "HIJKLMNOP",
+			"EVENT_CONTENT": "RABAR NA NIC",
+			"EVENT_END": "2017-05-20"
+		}
+	]
+}
+ */
  
+ /**
+ * @api{post}/v2/sidmapp Get/post app user id from/to database
+ * @apiName GetPostIdFromToDatabase
+ * @apiGroup User
+ * @apiVersion 0.6.0
+ * @apiParamExample {json} Request body example:
+{
+	"resource":[
+		{
+			"EMAIL": "aaaaaa@asas.com",
+			"FB_ID": "qwertyuioplkjhgfdsazxcvbnm",
+			"NAME": "AAAAA BBBBBB"
+		}
+  ]
+}
+ * @apiSuccessExample Example: Data in case of success:
+{
+	"user": 
+		{
+			"ID": 1
+		}
+}
+ */

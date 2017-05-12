@@ -85,7 +85,7 @@
  */
  
  /**
- * @api{get}/v2/place/category Get place of given category
+ * @api{get}/v2/place/category Get place with given category
  * @apiName GetPlaceWithCategory
  * @apiGroup User
  * @apiVersion 0.3.1
@@ -141,7 +141,7 @@ JSON
  */
  
   /**
- * @api{get}/v2/place/namespace Get place of given namespace
+ * @api{get}/v2/place/namespace Get place with given namespace
  * @apiName GetPlaceWithNamespace
  * @apiGroup User
  * @apiVersion 0.3.1

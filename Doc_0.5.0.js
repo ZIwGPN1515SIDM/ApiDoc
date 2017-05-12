@@ -2,7 +2,7 @@
  * @api{get}/v2/place Get place
  * @apiName GetPlace
  * @apiGroup User
- * @apiVersion 0.3.0
+ * @apiVersion 0.5.0
  * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.
  * @apiParam {String} place Place.
@@ -18,34 +18,49 @@
 			"SUM_SCORE": 0,
 			"COMMENTS_COUNT": 0,
 			"GOOGLE_PLACE_ID": null,
-			"INSTANCE": "qwertyuiop"
-			"LATITUDE ": 0,
-			"LONGITUDE": 0
-		}
-	,
-	"namespacePhotos": [  
-		{
-			"URL": "http://i.imgur.com/bgRtGjJ.jpg"
-		}
-	],
+			"INSTANCE": "qwertyuiop",
+			"LATITUDE": 0,
+			"LONGITUDE": 0,
+			"NAME": "12341234",
+			"CATEGORY_ID": 2,
+			"OWNER_ID": 1,
+			"CATEGORY": 
+				{
+					"ID": 2,
+					"NAME": "Parki"
+				},
+			"NAMESPACES_PHOTOS": [
+				{
+					"ID": 1,
+					"URL": "http://i.imgur.com/bgRtGjJ.jpg",
+					"NAMESPACE_ID": 1
+				},
+			(…)
+			],
+		},
 	"place": 
 		{
 			"ID": 1,
 			"DESCRIPTION": "Testowy opis",
 			"ADVERT": null,
 			"EVENT_CONTENT": null,
+			"NAME": "ABCDEFG",
 			"ADDED_ON": "2017-04-08 11:45:24",
 			"SUM_SCORE": 0,
 			"COMMENTS_COUNT": 0,
 			"GOOGLE_PLACE_ID": null,
-			"INSTANCE": "asdfghjkl"
+			"INSTANCE": "asdfghjkl",
+			"NAMESPACE_ID": 1,
+			"OWNER_ID": 1,
+			"PLACES_PHOTOS": [ 
+				{
+					"ID": 1,
+					"URL": "http://i.imgur.com/Qj3wuoj.jpg",
+					"PLACE_ID": 1
+				},
+			(…)
+			]
 		}
-	,
-	“placePhotos": [ 
-		{
-			"URL": "http://i.imgur.com/Qj3wuoj.jpg"
-		}
-	]
 }
  */
  
@@ -53,7 +68,7 @@
  * @api{get}/v2/place Get namespace
  * @apiName GetNamespace
  * @apiGroup User
- * @apiVersion 0.3.0
+ * @apiVersion 0.5.0
  * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.
  * @apiSuccessExample Example: Data in case of success:
@@ -68,16 +83,26 @@
 			"SUM_SCORE": 0,
 			"COMMENTS_COUNT": 0,
 			"GOOGLE_PLACE_ID": null,
-			"INSTANCE": "qwertyuiop"
-			"LATITUDE ": 0,
-			"LONGITUDE": 0
+			"INSTANCE": "qwertyuiop",
+			"LATITUDE": 0,
+			"LONGITUDE": 0,
+			"NAME": "12341234",
+			"CATEGORY_ID": 2,
+			"OWNER_ID": 1,
+			"CATEGORY": 
+				{
+					"ID": 2,
+					"NAME": "Parki"
+				},		
+			"NAMESPACES_PHOTOS": [ 
+				{
+					"ID": 1,
+					"URL": "http://i.imgur.com/bgRtGjJ.jpg",
+					"NAMESPACE_ID": 1
+				},
+				(…)
+			]
 		}
-	,
-	"namespacePhotos": [
-		{
-			"URL": "http://i.imgur.com/bgRtGjJ.jpg"
-		}
-	],
 }
  */
  
@@ -85,14 +110,14 @@
  * @api{get}/v2/place/category Get place with given category
  * @apiName GetPlaceWithCategory
  * @apiGroup User
- * @apiVersion 0.3.0
+ * @apiVersion 0.5.0
  * @apiParam {String} type Type.
  * @apiParam {Number} category Category id.
  * @apiParam {Number} limit Limit (optional).
  * @apiParam {Number} offset Offset (optional).
  * @apiSuccessExample Example: Data in case of success:
 {
-	"namespaces": [
+	"namespaces": [  
 		{
 			"ID": 1,
 			"DESCRIPTION": "Testowy namespace",
@@ -102,9 +127,25 @@
 			"SUM_SCORE": 0,
 			"COMMENTS_COUNT": 0,
 			"GOOGLE_PLACE_ID": null,
-			"INSTANCE": "qwertyuiop"
-			"LATITUDE ": 0,
-			"LONGITUDE": 0
+			"INSTANCE": "qwertyuiop",
+			"LATITUDE": 0,
+			"LONGITUDE": 0,
+			"NAME": "12341234",
+			"CATEGORY_ID": 2,
+			"OWNER_ID": 1,
+			"CATEGORY": 
+				{
+					"ID": 2,
+					"NAME": "Parki"
+				},
+			"NAMESPACES_PHOTOS": [
+				{
+					"ID": 1,
+					"URL": "http://i.imgur.com/bgRtGjJ.jpg",
+					"NAMESPACE_ID": 1
+				},
+			(…)
+			]
 		},
 		(…)
 	]
@@ -115,8 +156,8 @@
  * @api{get}/v2/place/category Get category list
  * @apiName GetCategoryList
  * @apiGroup User
- * @apiVersion 0.3.0
- * @apiSuccessExample Example: Data in case of success:
+ * @apiVersion 0.5.0
+ * @apiSuccessExample Example: Data in case with success:
 JSON
 {
 	"categories": [
@@ -140,7 +181,7 @@ JSON
  * @api{get}/v2/place/namespace Get place with given namespace
  * @apiName GetPlaceWithNamespace
  * @apiGroup User
- * @apiVersion 0.3.0
+ * @apiVersion 0.5.0
  * @apiParam {String} type Type.
  * @apiParam {Number} namespaceid Namespace id.
  * @apiParam {Number} limit Limit (optional).
@@ -149,17 +190,60 @@ JSON
 {
 	"places": [
 		{
-			"ID": 1,
-			"DESCRIPTION": "Testowy opis",
-			"ADVERT": null,
-			"EVENT_CONTENT": null,
-			"ADDED_ON": "2017-04-08 11:45:24",
-			"SUM_SCORE": 0,
-			"COMMENTS_COUNT": 0,
-			"GOOGLE_PLACE_ID": null,
-			"INSTANCE": "asdfghjkl"
-		},
+		"ID": 1,
+		"DESCRIPTION": "Testowy opis",
+		"ADVERT": null,
+		"EVENT_CONTENT": null,
+		"ADDED_ON": "2017-04-08 11:45:24",
+		"SUM_SCORE": 0,
+		"COMMENTS_COUNT": 0,
+		"GOOGLE_PLACE_ID": null,
+		"INSTANCE": "asdfghjkl",
+		"NAME": "ABCDEFG",
+		"NAMESPACE_ID": 1,
+		"OWNER_ID": 1,
+		"PLACES_PHOTOS": [
+			{
+				"ID": 1,
+				"URL": "http://i.imgur.com/Qj3wuoj.jpg",
+				"PLACE_ID": 1
+			},
 		(…)
+		]
+		}
+	]
+}
+ */
+ 
+   /**
+ * @api{get}/v2/place/event Get events from namespace and its places
+ * @apiName GetEventsFromNamespace
+ * @apiGroup User
+ * @apiVersion 0.5.0
+ * @apiParam {String} type Type.
+ * @apiParam {Number} namespaceid Namespace id.
+ * @apiSuccessExample Example: Data in case of success:
+{
+	"namespace": 
+		{
+			"ID": 1,
+			"NAME": "12341234",
+			"EVENT_CONTENT": null,
+			"EVENT_END": null
+		},
+	"places": [ 
+		{
+			"ID": 1,
+			"NAME": "ABCDEFG",
+			"EVENT_CONTENT": null,
+			"EVENT_END": null
+		},  
+		{
+			"ID": 3,
+			"NAME": "HIJKLMNOP",
+			"EVENT_CONTENT": "RABAR NA NIC",
+			"EVENT_END": "2017-05-20"
+		}
 	]
 }
  */
