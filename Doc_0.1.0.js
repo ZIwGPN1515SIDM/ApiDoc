@@ -1,7 +1,7 @@
 /**
  * @api{get}/place Get place
  * @apiName GetPlace
- * @apiGroup User
+ * @apiGroup Place
  * @apiVersion 0.1.0
  * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.
@@ -50,7 +50,7 @@
  /**
  * @api{get}/place Get namespace
  * @apiName GetNamespace
- * @apiGroup User
+ * @apiGroup Namespace
  * @apiVersion 0.1.0
  * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.

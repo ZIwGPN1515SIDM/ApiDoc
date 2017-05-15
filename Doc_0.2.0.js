@@ -1,7 +1,7 @@
 /**
  * @api{get}/v2/place Get place
  * @apiName GetPlace
- * @apiGroup User
+ * @apiGroup Place
  * @apiVersion 0.2.0
  * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.
@@ -50,7 +50,7 @@
  /**
  * @api{get}/v2/place Get namespace
  * @apiName GetNamespace
- * @apiGroup User
+ * @apiGroup Namespace
  * @apiVersion 0.2.0
  * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.
@@ -80,7 +80,7 @@
  /**
  * @api{get}/v2/place/category Get place with given category
  * @apiName GetPlaceWithCategory
- * @apiGroup User
+ * @apiGroup Place
  * @apiVersion 0.2.0
  * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.
@@ -108,7 +108,7 @@
   /**
  * @api{get}/v2/place/category Get category list
  * @apiName GetCategoryList
- * @apiGroup User
+ * @apiGroup Namespace
  * @apiVersion 0.2.0
  * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.

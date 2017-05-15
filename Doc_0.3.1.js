@@ -1,7 +1,7 @@
 /**
  * @api{get}/v2/place Get place
  * @apiName GetPlace
- * @apiGroup User
+ * @apiGroup Place
  * @apiVersion 0.3.1
  * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.
@@ -54,7 +54,7 @@
  /**
  * @api{get}/v2/place Get namespace
  * @apiName GetNamespace
- * @apiGroup User
+ * @apiGroup Namespace
  * @apiVersion 0.3.1
  * @apiParam {String} type Type.
  * @apiParam {String} namespace Namespace.
@@ -87,7 +87,7 @@
  /**
  * @api{get}/v2/place/category Get place with given category
  * @apiName GetPlaceWithCategory
- * @apiGroup User
+ * @apiGroup Place
  * @apiVersion 0.3.1
  * @apiParam {String} type Type.
  * @apiParam {Number} category Category id.
@@ -118,7 +118,7 @@
   /**
  * @api{get}/v2/place/category Get category list
  * @apiName GetCategoryList
- * @apiGroup User
+ * @apiGroup Namespace
  * @apiVersion 0.3.1
  * @apiSuccessExample Example: Data in case of success:
 JSON
@@ -143,7 +143,7 @@ JSON
   /**
  * @api{get}/v2/place/namespace Get place with given namespace
  * @apiName GetPlaceWithNamespace
- * @apiGroup User
+ * @apiGroup Place
  * @apiVersion 0.3.1
  * @apiParam {String} type Type.
  * @apiParam {Number} namespaceid Namespace id.
