@@ -126,8 +126,8 @@
  * @apiParam {Number} [offset] Offset.
  * @apiSuccess {String} type namespace
  * @apiSuccess {Number} category 1
- * @apiSuccess {Number} [limit] 111
- * @apiSuccess {Number} [offset] 11
+ * @apiSuccess {Number} limit 111
+ * @apiSuccess {Number} offset 11
  * @apiSuccessExample Response (success):
  * {
  *	"namespaces": [  
@@ -204,8 +204,8 @@
  * @apiParam {Number} [offset] Offset.
  * @apiSuccess {String} type place
  * @apiSuccess {Number} namespaceid 1
- * @apiSuccess {Number} [limit] 111
- * @apiSuccess {Number} [offset] 11
+ * @apiSuccess {Number} limit 111
+ * @apiSuccess {Number} offset 11
  * @apiSuccessExample Response (success):
  *{
  *	"places": [
@@ -420,8 +420,23 @@
  * {
  *      "resource":[
  *      {
- *        "FB_USER_ID": 1,
- *        "PATH": "asdasd"
+ *        	"FB_USER_ID": 1,
+ *      	"PATH": [
+ *			{
+ *				"id": 1,
+ *				"name": "test1",
+ *				"longitude": 12.23,
+ *				"latitude": 12.12,
+ *				"photo": "urlsomdasodmasodas"
+ *			}, {
+ *				"id": 2,
+ *				"name": "test5",
+ *				"longitude": 12.23,
+ *				"latitude": 12.12,
+ *				"photo": "urlsomdasodmasodas"
+ *			},
+ *			(...)
+ *			]
  *      }
  *      ]
  * }
@@ -438,8 +453,8 @@
  * @apiParam {Number} [offset] Offset.
  * @apiSuccess {String} fields ID%20%2CCREATED_ON
  * @apiSuccess {String} filter FB_USER_ID%3D1 
- * @apiSuccess {Number} [limit] 111
- * @apiSuccess {Number} [offset] 11
+ * @apiSuccess {Number} limit 111
+ * @apiSuccess {Number} offset 11
  * @apiSuccessExample Request body example:
  * {
  *     "resource":[
@@ -463,11 +478,27 @@
  * {
  *     "resource":[
  *       {
- *         "ID": 1,
- *        “FB_USER_ID”: 1,
- *        “PATH”: <wg tego co dodajesz>,
+ *         	"ID": 1,
+ *        	“FB_USER_ID”: 1,
+ *      	"PATH": [
+ *			{
+ *				"id": 1,
+ *				"name": "test1",
+ *				"longitude": 12.23,
+ *				"latitude": 12.12,
+ *				"photo": "urlsomdasodmasodas"
+ *			}, {
+ *				"id": 2,
+ *				"name": "test5",
+ *				"longitude": 12.23,
+ *				"latitude": 12.12,
+ *				"photo": "urlsomdasodmasodas"
+ *			},
+ *			(...)
+ *			]
+ *      },
  *         "CREATED_ON": "data"
- *       }
- *       ]
+ *      }
+ *      ]
  * }
  */

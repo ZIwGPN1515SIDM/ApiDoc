@@ -221,14 +221,14 @@
           {
             "group": "Success 200",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "limit",
             "description": "<p>111</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "offset",
             "description": "<p>11</p>"
           }
@@ -377,14 +377,14 @@
           {
             "group": "Success 200",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "limit",
             "description": "<p>111</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "offset",
             "description": "<p>11</p>"
           }
@@ -432,7 +432,7 @@
       "examples": [
         {
           "title": "Request body example:",
-          "content": "{\n     \"resource\":[\n     {\n       \"FB_USER_ID\": 1,\n       \"PATH\": \"asdasd\"\n     }\n     ]\n}",
+          "content": "{\n     \"resource\":[\n     {\n       \t\"FB_USER_ID\": 1,\n     \t\"PATH\": [\n\t\t\t{\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"name\": \"test1\",\n\t\t\t\t\"longitude\": 12.23,\n\t\t\t\t\"latitude\": 12.12,\n\t\t\t\t\"photo\": \"urlsomdasodmasodas\"\n\t\t\t}, {\n\t\t\t\t\"id\": 2,\n\t\t\t\t\"name\": \"test5\",\n\t\t\t\t\"longitude\": 12.23,\n\t\t\t\t\"latitude\": 12.12,\n\t\t\t\t\"photo\": \"urlsomdasodmasodas\"\n\t\t\t},\n\t\t\t(...)\n\t\t\t]\n     }\n     ]\n}",
           "type": "json"
         }
       ]
@@ -662,14 +662,14 @@
           {
             "group": "Success 200",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "limit",
             "description": "<p>111</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "offset",
             "description": "<p>11</p>"
           }
@@ -721,7 +721,7 @@
       "examples": [
         {
           "title": "Request body example:",
-          "content": "{\n    \"resource\":[\n      {\n        \"ID\": 1,\n       “FB_USER_ID”: 1,\n       “PATH”: <wg tego co dodajesz>,\n        \"CREATED_ON\": \"data\"\n      }\n      ]\n}",
+          "content": "{\n    \"resource\":[\n      {\n        \t\"ID\": 1,\n       \t“FB_USER_ID”: 1,\n     \t\"PATH\": [\n\t\t\t{\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"name\": \"test1\",\n\t\t\t\t\"longitude\": 12.23,\n\t\t\t\t\"latitude\": 12.12,\n\t\t\t\t\"photo\": \"urlsomdasodmasodas\"\n\t\t\t}, {\n\t\t\t\t\"id\": 2,\n\t\t\t\t\"name\": \"test5\",\n\t\t\t\t\"longitude\": 12.23,\n\t\t\t\t\"latitude\": 12.12,\n\t\t\t\t\"photo\": \"urlsomdasodmasodas\"\n\t\t\t},\n\t\t\t(...)\n\t\t\t]\n     },\n        \"CREATED_ON\": \"data\"\n     }\n     ]\n}",
           "type": "json"
         }
       ]
