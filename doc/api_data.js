@@ -35,6 +35,31 @@ define({ "api": [
     "group": "Namespace",
     "version": "0.8.0",
     "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "categories",
+            "description": "<p>Categories</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "categories.ID",
+            "description": "<p>Id of the category</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "categories.NAME",
+            "description": "<p>Name of the category</p>"
+          }
+        ]
+      },
       "examples": [
         {
           "title": "Response (success):",
@@ -61,14 +86,14 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "type",
-            "description": "<p>Type, place or namespace.</p>"
+            "description": "<p>Type, &quot;place&quot; or &quot;namespace&quot;</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "namespace",
-            "description": "<p>Namespace name.</p>"
+            "description": "<p>Namespace name</p>"
           }
         ]
       }
@@ -78,17 +103,73 @@ define({ "api": [
         "Success 200": [
           {
             "group": "Success 200",
-            "type": "String",
+            "type": "Object",
             "optional": false,
-            "field": "type",
-            "description": "<p>namespace</p>"
+            "field": "namespace",
+            "description": "<p>Information about namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.ID",
+            "description": "<p>Id of the place</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "namespace",
-            "description": "<p>qwertyuiop</p>"
+            "field": "namespace.NAME",
+            "description": "<p>Name</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.EVENT_CONTENT",
+            "description": "<p>Informations about events</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.EVENT_END",
+            "description": "<p>Information about event ending</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "places",
+            "description": "<p>Information about places in the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "places.ID",
+            "description": "<p>Id of the place</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "places.NAME",
+            "description": "<p>Name of the place</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "places.EVENT_CONTENT",
+            "description": "<p>Informations about events</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "places.EVENT_END",
+            "description": "<p>Information about event ending</p>"
           }
         ]
       },
@@ -118,7 +199,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "type",
-            "description": "<p>Type, place or namespace.</p>"
+            "description": "<p>Type, &quot;place&quot; or &quot;namespace&quot;.</p>"
           },
           {
             "group": "Parameter",
@@ -135,24 +216,164 @@ define({ "api": [
         "Success 200": [
           {
             "group": "Success 200",
-            "type": "String",
+            "type": "Object",
             "optional": false,
-            "field": "type",
-            "description": "<p>place</p>"
+            "field": "namespace",
+            "description": "<p>Information about namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.ID",
+            "description": "<p>Id of the namespac/place</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "namespace",
-            "description": "<p>qwertyuiop</p>"
+            "field": "namespace.DESCRIPTION",
+            "description": "<p>Description of the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.ADVERT",
+            "description": "<p>Advert information</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.EVENT_CONTENT",
+            "description": "<p>Informations about events</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.ADDED_ON",
+            "description": "<p>Date added in form &quot;yyyy-mm-dd hh-mm-ss&quot;</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.SUM_SCORE",
+            "description": "<p>Sum score</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.COMMENTS_COUNT",
+            "description": "<p>Total count of comments</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.GOOGLE_PLACE_ID",
+            "description": "<p>Id on Google Places</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.INSTANCE",
+            "description": "<p>Instance</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.Latitude",
+            "description": "<p>coordinate Lattitude</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.Longitude",
+            "description": "<p>coordinate Longitude coordinate</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.NAME",
+            "description": "<p>Name of the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.CATEGORY_ID",
+            "description": "<p>Id of the category</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.OWNER_ID",
+            "description": "<p>Owner Id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "namespace.CATEGORY",
+            "description": "<p>Category information</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.CATEGORY.ID",
+            "description": "<p>Id of the category</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.CATEGORY.NAME",
+            "description": "<p>Name of the category</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "namespace.NAMESPACES_PHOTOS",
+            "description": "<p>Informations about photos related to the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.NAMESPACES_PHOTOS.ID",
+            "description": "<p>Id of the namespace photo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.NAMESPACES_PHOTOS.URL",
+            "description": "<p>URL of the photo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.NAMESPACES_PHOTOS.NAMESPACES_ID",
+            "description": "<p>Id of the namespace</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Response (success):",
-          "content": "{\n\t\"namespace\": \n\t\t{\n\t\t\t\"ID\": 1,\n\t\t\t\"DESCRIPTION\": \"Testowy namespace\",\n\t\t\t\"ADVERT\": null,\n\t\t\t\"EVENT_CONTENT\": null,\n\t\t\t\"ADDED_ON\": \"2017-04-08 11:45:49\",\n\t\t\t\"SUM_SCORE\": 0,\n\t\t\t\"COMMENTS_COUNT\": 0,\n\t\t\t\"GOOGLE_PLACE_ID\": null,\n\t\t\t\"INSTANCE\": \"qwertyuiop\",\n\t\t\t\"LATITUDE\": 0,\n\t\t\t\"LONGITUDE\": 0,\n\t\t\t\"NAME\": \"12341234\",\n\t\t\t\"CATEGORY_ID\": 2,\n\t\t\t\"OWNER_ID\": 1,\n\t\t\t\"CATEGORY\": \n\t\t\t\t{\n\t\t\t\t\t\"ID\": 2,\n\t\t\t\t\t\"NAME\": \"Parki\"\n\t\t\t\t},\t\t\n\t\t\t\"NAMESPACES_PHOTOS\": [ \n\t\t\t\t{\n\t\t\t\t\t\"ID\": 1,\n\t\t\t\t\t\"URL\": \"http://i.imgur.com/bgRtGjJ.jpg\",\n\t\t\t\t\t\"NAMESPACE_ID\": 1\n\t\t\t\t},\n\t\t\t\t(…)\n\t\t\t]\n\t\t}\n}",
+          "content": "{\n\t\"namespace\": \n\t\t{\n\t\t\t\"ID\": 1,\n\t\t\t\"DESCRIPTION\": \"Testowy namespace\",\n\t\t\t\"ADVERT\": null,\n\t\t\t\"EVENT_CONTENT\": null,\n\t\t\t\"ADDED_ON\": \"2017-04-08 11:45:49\",\n\t\t\t\"SUM_SCORE\": 0,\n\t\t\t\"COMMENTS_COUNT\": 0,\n\t\t\t\"GOOGLE_PLACE_ID\": null,\n\t\t\t\"INSTANCE\": \"qwertyuiop\",\n\t\t\t\"Latitude coordinate\": 0,\n\t\t\t\"Longitude coordinate\": 0,\n\t\t\t\"NAME\": \"12341234\",\n\t\t\t\"CATEGORY_ID\": 2,\n\t\t\t\"OWNER_ID\": 1,\n\t\t\t\"CATEGORY\": \n\t\t\t\t{\n\t\t\t\t\t\"ID\": 2,\n\t\t\t\t\t\"NAME\": \"Parki\"\n\t\t\t\t},\t\t\n\t\t\t\"NAMESPACES_PHOTOS\": [ \n\t\t\t\t{\n\t\t\t\t\t\"ID\": 1,\n\t\t\t\t\t\"URL\": \"http://i.imgur.com/bgRtGjJ.jpg\",\n\t\t\t\t\t\"NAMESPACE_ID\": 1\n\t\t\t\t},\n\t\t\t\t(…)\n\t\t\t]\n\t\t}\n}",
           "type": "json"
         }
       ]
@@ -175,7 +396,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "type",
-            "description": "<p>Type, place or namespace.</p>"
+            "description": "<p>Type, namespace.</p>"
           },
           {
             "group": "Parameter",
@@ -206,38 +427,164 @@ define({ "api": [
         "Success 200": [
           {
             "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "namespaces",
+            "description": "<p>Array of namespaces matching category</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespaces.ID",
+            "description": "<p>Id of the namespac</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "type",
-            "description": "<p>namespace</p>"
+            "field": "namespaces.DESCRIPTION",
+            "description": "<p>Description of the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespaces.ADVERT",
+            "description": "<p>Advert information</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespaces.EVENT_CONTENT",
+            "description": "<p>Informations about events</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespaces.ADDED_ON",
+            "description": "<p>Date added in form &quot;yyyy-mm-dd hh-mm-ss&quot;</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "category",
-            "description": "<p>1</p>"
+            "field": "namespaces.SUM_SCORE",
+            "description": "<p>Sum score</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "limit",
-            "description": "<p>111</p>"
+            "field": "namespaces.COMMENTS_COUNT",
+            "description": "<p>Total count of comments</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespaces.GOOGLE_PLACE_ID",
+            "description": "<p>Id on Google Places</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespaces.INSTANCE",
+            "description": "<p>Instance</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "offset",
-            "description": "<p>11</p>"
+            "field": "namespaces.Latitude",
+            "description": "<p>coordinate Lattitude</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespaces.Longitude",
+            "description": "<p>coordinate Longitude coordinate</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespaces.NAME",
+            "description": "<p>Name</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespaces.CATEGORY_ID",
+            "description": "<p>Id of the category</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespaces.OWNER_ID",
+            "description": "<p>Owner Id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "namespaces.CATEGORY",
+            "description": "<p>Category information</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespaces.CATEGORY.ID",
+            "description": "<p>Id of the category</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespaces.CATEGORY.NAME",
+            "description": "<p>Name of the category</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "namespaces.NAMESPACES_PHOTOS",
+            "description": "<p>Informations about photos related to the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespaces.NAMESPACES_PHOTOS.ID",
+            "description": "<p>Id of the namespace photo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespaces.NAMESPACES_PHOTOS.URL",
+            "description": "<p>URL of the photo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespaces.NAMESPACES_PHOTOS.NAMESPACES_ID",
+            "description": "<p>Id of the namespace</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Response (success):",
-          "content": "{\n\t\"namespaces\": [  \n\t\t{\n\t\t\t\"ID\": 1,\n\t\t\t\"DESCRIPTION\": \"Testowy namespace\",\n\t\t\t\"ADVERT\": null,\n\t\t\t\"EVENT_CONTENT\": null,\n\t\t\t\"ADDED_ON\": \"2017-04-08 11:45:49\",\n\t\t\t\"SUM_SCORE\": 0,\n\t\t\t\"COMMENTS_COUNT\": 0,\n\t\t\t\"GOOGLE_PLACE_ID\": null,\n\t\t\t\"INSTANCE\": \"qwertyuiop\",\n\t\t\t\"LATITUDE\": 0,\n\t\t\t\"LONGITUDE\": 0,\n\t\t\t\"NAME\": \"12341234\",\n\t\t\t\"CATEGORY_ID\": 2,\n\t\t\t\"OWNER_ID\": 1,\n\t\t\t\"CATEGORY\": \n\t\t\t\t{\n\t\t\t\t\t\"ID\": 2,\n\t\t\t\t\t\"NAME\": \"Parki\"\n\t\t\t\t},\n\t\t\t\"NAMESPACES_PHOTOS\": [\n\t\t\t\t{\n\t\t\t\t\t\"ID\": 1,\n\t\t\t\t\t\"URL\": \"http://i.imgur.com/bgRtGjJ.jpg\",\n\t\t\t\t\t\"NAMESPACE_ID\": 1\n\t\t\t\t},\n\t\t\t(…)\n\t\t\t]\n\t\t},\n\t\t(…)\n\t]\n}",
+          "content": "{\n\t\"namespaces\": [  \n\t\t{\n\t\t\t\"ID\": 1,\n\t\t\t\"DESCRIPTION\": \"Testowy namespace\",\n\t\t\t\"ADVERT\": null,\n\t\t\t\"EVENT_CONTENT\": null,\n\t\t\t\"ADDED_ON\": \"2017-04-08 11:45:49\",\n\t\t\t\"SUM_SCORE\": 0,\n\t\t\t\"COMMENTS_COUNT\": 0,\n\t\t\t\"GOOGLE_PLACE_ID\": null,\n\t\t\t\"INSTANCE\": \"qwertyuiop\",\n\t\t\t\"Latitude coordinate\": 0,\n\t\t\t\"Longitude coordinate\": 0,\n\t\t\t\"NAME\": \"12341234\",\n\t\t\t\"CATEGORY_ID\": 2,\n\t\t\t\"OWNER_ID\": 1,\n\t\t\t\"CATEGORY\": \n\t\t\t\t{\n\t\t\t\t\t\"ID\": 2,\n\t\t\t\t\t\"NAME\": \"Parki\"\n\t\t\t\t},\n\t\t\t\"NAMESPACES_PHOTOS\": [\n\t\t\t\t{\n\t\t\t\t\t\"ID\": 1,\n\t\t\t\t\t\"URL\": \"http://i.imgur.com/bgRtGjJ.jpg\",\n\t\t\t\t\t\"NAMESPACE_ID\": 1\n\t\t\t\t},\n\t\t\t(…)\n\t\t\t]\n\t\t},\n\t\t(…)\n\t]\n}",
           "type": "json"
         }
       ]
@@ -260,7 +607,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "type",
-            "description": "<p>Type, place or namespace.</p>"
+            "description": "<p>Type, &quot;place&quot; or &quot;namespace&quot;.</p>"
           },
           {
             "group": "Parameter",
@@ -284,31 +631,269 @@ define({ "api": [
         "Success 200": [
           {
             "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "type",
-            "description": "<p>place</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
+            "type": "Object",
             "optional": false,
             "field": "namespace",
-            "description": "<p>qwertyuiop</p>"
+            "description": "<p>Information about namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.ID",
+            "description": "<p>Id of the namespac</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
+            "field": "namespace.DESCRIPTION",
+            "description": "<p>Description of the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.ADVERT",
+            "description": "<p>Advert information</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.EVENT_CONTENT",
+            "description": "<p>Informations about events</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.ADDED_ON",
+            "description": "<p>Date added in form &quot;yyyy-mm-dd hh-mm-ss&quot;</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.SUM_SCORE",
+            "description": "<p>Sum score</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.COMMENTS_COUNT",
+            "description": "<p>Total count of comments</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.GOOGLE_PLACE_ID",
+            "description": "<p>Id on Google Places</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.INSTANCE",
+            "description": "<p>Instance</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.Latitude",
+            "description": "<p>coordinate Lattitude</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.Longitude",
+            "description": "<p>coordinate Longitude coordinate</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.NAME",
+            "description": "<p>Name of the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.CATEGORY_ID",
+            "description": "<p>Id of the category</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.OWNER_ID",
+            "description": "<p>Owner Id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "namespace.CATEGORY",
+            "description": "<p>Category information</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.CATEGORY.ID",
+            "description": "<p>Id of the category</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.CATEGORY.NAME",
+            "description": "<p>Name of the category</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "namespace.NAMESPACES_PHOTOS",
+            "description": "<p>Informations about photos related to the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.NAMESPACES_PHOTOS.ID",
+            "description": "<p>Id of the namespace photo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.NAMESPACES_PHOTOS.URL",
+            "description": "<p>URL of the photo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.NAMESPACES_PHOTOS.NAMESPACES_ID",
+            "description": "<p>Id of the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
             "field": "place",
-            "description": "<p>asdfghjkl</p>"
+            "description": "<p>Information about place</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "place.ID",
+            "description": "<p>Id of the namespac/place</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "place.DESCRIPTION",
+            "description": "<p>Description of the place</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "place.ADVERT",
+            "description": "<p>Advert information</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "place.EVENT_CONTENT",
+            "description": "<p>Informations about events</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "place.ADDED_ON",
+            "description": "<p>Date added in form &quot;yyyy-mm-dd hh-mm-ss&quot;</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "place.SUM_SCORE",
+            "description": "<p>Sum score</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "place.COMMENTS_COUNT",
+            "description": "<p>Total count of comments</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "place.GOOGLE_PLACE_ID",
+            "description": "<p>Id on Google Places</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "place.INSTANCE",
+            "description": "<p>Instance</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "place.NAMESPACES_ID",
+            "description": "<p>Id of the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "namespace.PLACES_PHOTOS",
+            "description": "<p>Informations about photos related to the place</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.PLACES_PHOTOS.ID",
+            "description": "<p>Id of the place photo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "namespace.PLACES_PHOTOS.URL",
+            "description": "<p>URL of the photo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "namespace.PLACES_PHOTOS.NAMESPACES_ID",
+            "description": "<p>Id of the place</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Response (success):",
-          "content": "{\n\t\"namespace\": \n\t\t{\n\t\t\t\"ID\": 1,\n\t\t\t\"DESCRIPTION\": \"Testowy namespace\",\n\t\t\t\"ADVERT\": null,\n\t\t\t\"EVENT_CONTENT\": null,\n\t\t\t\"ADDED_ON\": \"2017-04-08 11:45:49\",\n\t\t\t\"SUM_SCORE\": 0,\n\t\t\t\"COMMENTS_COUNT\": 0,\n\t\t\t\"GOOGLE_PLACE_ID\": null,\n\t\t\t\"INSTANCE\": \"qwertyuiop\",\n\t\t\t\"LATITUDE\": 0,\n\t\t\t\"LONGITUDE\": 0,\n\t\t\t\"NAME\": \"12341234\",\n\t\t\t\"CATEGORY_ID\": 2,\n\t\t\t\"OWNER_ID\": 1,\n\t\t\t\"CATEGORY\": \n\t\t\t\t{\n\t\t\t\t\t\"ID\": 2,\n\t\t\t\t\t\"NAME\": \"Parki\"\n\t\t\t\t},\n\t\t\t\"NAMESPACES_PHOTOS\": [\n\t\t\t\t{\n\t\t\t\t\t\"ID\": 1,\n\t\t\t\t\t\"URL\": \"http://i.imgur.com/bgRtGjJ.jpg\",\n\t\t\t\t\t\"NAMESPACE_ID\": 1\n\t\t\t\t},\n\t\t\t(…)\n\t\t\t],\n\t\t},\n\t\"place\": \n\t\t{\n\t\t\t\"ID\": 1,\n\t\t\t\"DESCRIPTION\": \"Testowy opis\",\n\t\t\t\"ADVERT\": null,\n\t\t\t\"EVENT_CONTENT\": null,\n\t\t\t\"NAME\": \"ABCDEFG\",\n\t\t\t\"ADDED_ON\": \"2017-04-08 11:45:24\",\n\t\t\t\"SUM_SCORE\": 0,\n\t\t\t\"COMMENTS_COUNT\": 0,\n\t\t\t\"GOOGLE_PLACE_ID\": null,\n\t\t\t\"INSTANCE\": \"asdfghjkl\",\n\t\t\t\"NAMESPACE_ID\": 1,\n\t\t\t\"OWNER_ID\": 1,\n\t\t\t\"PLACES_PHOTOS\": [ \n\t\t\t\t{\n\t\t\t\t\t\"ID\": 1,\n\t\t\t\t\t\"URL\": \"http://i.imgur.com/Qj3wuoj.jpg\",\n\t\t\t\t\t\"PLACE_ID\": 1\n\t\t\t\t},\n\t\t\t(…)\n\t\t\t]\n\t\t}\n}",
+          "content": "{\n\t\"namespace\": \n\t\t{\n\t\t\t\"ID\": 1,\n\t\t\t\"DESCRIPTION\": \"Testowy namespace\",\n\t\t\t\"ADVERT\": null,\n\t\t\t\"EVENT_CONTENT\": null,\n\t\t\t\"ADDED_ON\": \"2017-04-08 11:45:49\",\n\t\t\t\"SUM_SCORE\": 0,\n\t\t\t\"COMMENTS_COUNT\": 0,\n\t\t\t\"GOOGLE_PLACE_ID\": null,\n\t\t\t\"INSTANCE\": \"qwertyuiop\",\n\t\t\t\"Latitude coordinate\": 0,\n\t\t\t\"Longitude coordinate\": 0,\n\t\t\t\"NAME\": \"12341234\",\n\t\t\t\"CATEGORY_ID\": 2,\n\t\t\t\"OWNER_ID\": 1,\n\t\t\t\"CATEGORY\": \n\t\t\t\t{\n\t\t\t\t\t\"ID\": 2,\n\t\t\t\t\t\"NAME\": \"Parki\"\n\t\t\t\t},\n\t\t\t\"NAMESPACES_PHOTOS\": [\n\t\t\t\t{\n\t\t\t\t\t\"ID\": 1,\n\t\t\t\t\t\"URL\": \"http://i.imgur.com/bgRtGjJ.jpg\",\n\t\t\t\t\t\"NAMESPACE_ID\": 1\n\t\t\t\t},\n\t\t\t(…)\n\t\t\t],\n\t\t},\n\t\"place\": \n\t\t{\n\t\t\t\"ID\": 1,\n\t\t\t\"DESCRIPTION\": \"Testowy opis\",\n\t\t\t\"ADVERT\": null,\n\t\t\t\"EVENT_CONTENT\": null,\n\t\t\t\"NAME\": \"ABCDEFG\",\n\t\t\t\"ADDED_ON\": \"2017-04-08 11:45:24\",\n\t\t\t\"SUM_SCORE\": 0,\n\t\t\t\"COMMENTS_COUNT\": 0,\n\t\t\t\"GOOGLE_PLACE_ID\": null,\n\t\t\t\"INSTANCE\": \"asdfghjkl\",\n\t\t\t\"NAMESPACE_ID\": 1,\n\t\t\t\"OWNER_ID\": 1,\n\t\t\t\"PLACES_PHOTOS\": [ \n\t\t\t\t{\n\t\t\t\t\t\"ID\": 1,\n\t\t\t\t\t\"URL\": \"http://i.imgur.com/Qj3wuoj.jpg\",\n\t\t\t\t\t\"PLACE_ID\": 1\n\t\t\t\t},\n\t\t\t(…)\n\t\t\t]\n\t\t}\n}",
           "type": "json"
         }
       ]
@@ -331,7 +916,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "type",
-            "description": "<p>Type, place or namespace.</p>"
+            "description": "<p>Type, &quot;place&quot; or &quot;namespace&quot;.</p>"
           },
           {
             "group": "Parameter",
@@ -362,31 +947,122 @@ define({ "api": [
         "Success 200": [
           {
             "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "places",
+            "description": "<p>Array of places</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "places.ID",
+            "description": "<p>Id of the place</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "type",
-            "description": "<p>place</p>"
+            "field": "places.DESCRIPTION",
+            "description": "<p>Description of the place</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "places.ADVERT",
+            "description": "<p>Advert information</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "places.EVENT_CONTENT",
+            "description": "<p>Informations about events</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "places.ADDED_ON",
+            "description": "<p>Date added in form &quot;yyyy-mm-dd hh-mm-ss&quot;</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "namespaceid",
-            "description": "<p>1</p>"
+            "field": "places.SUM_SCORE",
+            "description": "<p>Sum score</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "limit",
-            "description": "<p>111</p>"
+            "field": "places.COMMENTS_COUNT",
+            "description": "<p>Total count of comments</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "places.GOOGLE_PLACE_ID",
+            "description": "<p>Id on Google Places</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "places.INSTANCE",
+            "description": "<p>Instance</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "places.NAME",
+            "description": "<p>Name</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "offset",
-            "description": "<p>11</p>"
+            "field": "places.NAMESPACES_ID",
+            "description": "<p>Id of the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "places.OWNER_ID",
+            "description": "<p>Owner Id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "places.PLACES_PHOTOS",
+            "description": "<p>Informations about photos related to the place</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "places.PLACES_PHOTOS.ID",
+            "description": "<p>Id of the place photo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "places.PLACES_PHOTOS.URL",
+            "description": "<p>URL of the photo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "places.PLACES_PHOTOS.PLACE_ID",
+            "description": "<p>Id of the place</p>"
           }
         ]
       },
@@ -416,23 +1092,83 @@ define({ "api": [
             "type": "Number",
             "optional": false,
             "field": "FB_USERS_ID",
-            "description": "<p>User Id.</p>"
+            "description": "<p>User Id</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "PATH",
-            "description": "<p>Path.</p>"
+            "description": "<p>Path</p>"
           }
         ]
       }
     },
     "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "resource",
+            "description": "<p>Route information</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "resource.FB_USER_ID",
+            "description": "<p>Id of facebook user</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "resource.PATH",
+            "description": "<p>Path information</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "resource.PATH.id",
+            "description": "<p>Place Id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "resource.PATH.name",
+            "description": "<p>Place name</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "resource.PATH.Longitude",
+            "description": "<p>coordinate Place Longitude coordinate</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "resource.PATH.Latitude",
+            "description": "<p>coordinate Place Latitude coordinate</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "resource.PATH.photo",
+            "description": "<p>URL of place photo</p>"
+          }
+        ]
+      },
       "examples": [
         {
           "title": "Request body example:",
-          "content": "{\n     \"resource\":[\n     {\n       \t\"FB_USER_ID\": 1,\n     \t\"PATH\": [\n\t\t\t{\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"name\": \"test1\",\n\t\t\t\t\"longitude\": 12.23,\n\t\t\t\t\"latitude\": 12.12,\n\t\t\t\t\"photo\": \"urlsomdasodmasodas\"\n\t\t\t}, {\n\t\t\t\t\"id\": 2,\n\t\t\t\t\"name\": \"test5\",\n\t\t\t\t\"longitude\": 12.23,\n\t\t\t\t\"latitude\": 12.12,\n\t\t\t\t\"photo\": \"urlsomdasodmasodas\"\n\t\t\t},\n\t\t\t(...)\n\t\t\t]\n     }\n     ]\n}",
+          "content": "{\n     \"resource\":[\n     {\n       \t\"FB_USER_ID\": 1,\n     \t\"PATH\": [\n\t\t\t{\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"name\": \"test1\",\n\t\t\t\t\"Longitude coordinate\": 12.23,\n\t\t\t\t\"Latitude coordinate\": 12.12,\n\t\t\t\t\"photo\": \"urlsomdasodmasodas\"\n\t\t\t}, {\n\t\t\t\t\"id\": 2,\n\t\t\t\t\"name\": \"test5\",\n\t\t\t\t\"Longitude coordinate\": 12.23,\n\t\t\t\t\"Latitude coordinate\": 12.12,\n\t\t\t\t\"photo\": \"urlsomdasodmasodas\"\n\t\t\t},\n\t\t\t(...)\n\t\t\t]\n     }\n     ]\n}",
           "type": "json"
         }
       ]
@@ -452,17 +1188,24 @@ define({ "api": [
         "Parameter": [
           {
             "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "recource",
+            "description": "<p>User data</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "ID",
-            "description": "<p>User Id.</p>"
+            "field": "recource.ID",
+            "description": "<p>User Id</p>"
           },
           {
             "group": "Parameter",
             "type": "Boolean",
             "optional": false,
-            "field": "NEWSLETTER",
-            "description": "<p>Newsletter status (true = newsletter is on).</p>"
+            "field": "recource.NEWSLETTER",
+            "description": "<p>Newsletter status (true = newsletter is on)</p>"
           }
         ]
       },
@@ -475,6 +1218,17 @@ define({ "api": [
       ]
     },
     "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "success",
+            "description": "<p>Information if update went successfully</p>"
+          }
+        ]
+      },
       "examples": [
         {
           "title": "Response (success):",
@@ -501,14 +1255,14 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "type",
-            "description": "<p>Type, place or namespace.</p>"
+            "description": "<p>Type, &quot;place&quot; or &quot;namespace&quot;</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "id",
-            "description": "<p>Id of name or namespace.</p>"
+            "description": "<p>Id of name or namespace</p>"
           }
         ]
       }
@@ -518,17 +1272,52 @@ define({ "api": [
         "Success 200": [
           {
             "group": "Success 200",
-            "type": "String",
+            "type": "Array",
             "optional": false,
-            "field": "type",
-            "description": "<p>place/namespace</p>"
+            "field": "comments",
+            "description": "<p>Array of comments</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "id",
-            "description": "<p>4</p>"
+            "field": "comments.ID",
+            "description": "<p>Id of the comment</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "comments.CONTENT",
+            "description": "<p>Comment content</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "comments.SCORE",
+            "description": "<p>Score</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "comments.TYPE",
+            "description": "<p>Type , &quot;place&quot; or &quot;namespace&quot;</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "comments.NAMESPACES_ID",
+            "description": "<p>Id of the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "comments.FB_USERS_ID",
+            "description": "<p>Id of facebook user</p>"
           }
         ]
       },
@@ -560,24 +1349,31 @@ define({ "api": [
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Array",
             "optional": false,
-            "field": "EMAIL",
-            "description": "<p>E-mail adress.</p>"
+            "field": "resource",
+            "description": "<p>User data</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "FB_ID",
-            "description": "<p>Facebook Id.</p>"
+            "field": "resource.EMAIL",
+            "description": "<p>E-mail adress</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "NAME",
-            "description": "<p>Name and surname.</p>"
+            "field": "resource.FB_ID",
+            "description": "<p>Facebook Id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "resource.NAME",
+            "description": "<p>Name and surname</p>"
           }
         ]
       },
@@ -590,6 +1386,31 @@ define({ "api": [
       ]
     },
     "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "user",
+            "description": "<p>Information about user</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "user.ID",
+            "description": "<p>User id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "user.NEWSLETTER",
+            "description": "<p>Information about newsletter subscription</p>"
+          }
+        ]
+      },
       "examples": [
         {
           "title": "Response (success):",
@@ -616,28 +1437,28 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "fields",
-            "description": "<p>Fields.</p>"
+            "description": "<p>Fields</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "filter",
-            "description": "<p>Facebook user Id in format of FB_USER_ID%3DX, where Id comes in place of X.</p>"
+            "description": "<p>Facebook user Id in format of FB_USER_ID%3DX, where Id comes in place of X</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": true,
             "field": "limit",
-            "description": "<p>Limit.</p>"
+            "description": "<p>Limit</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": true,
             "field": "offset",
-            "description": "<p>Offset.</p>"
+            "description": "<p>Offset</p>"
           }
         ]
       }
@@ -647,31 +1468,24 @@ define({ "api": [
         "Success 200": [
           {
             "group": "Success 200",
-            "type": "String",
+            "type": "Array",
             "optional": false,
-            "field": "fields",
-            "description": "<p>ID%20%2CCREATED_ON</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "filter",
-            "description": "<p>FB_USER_ID%3D1</p>"
+            "field": "resource",
+            "description": "<p>Route information</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "limit",
-            "description": "<p>111</p>"
+            "field": "resource.ID",
+            "description": "<p>Route Id</p>"
           },
           {
             "group": "Success 200",
-            "type": "Number",
+            "type": "String",
             "optional": false,
-            "field": "offset",
-            "description": "<p>11</p>"
+            "field": "resource.CREATED_ON",
+            "description": "<p>Route creation date in form &quot;yyyy-mm-dd hh-mm-ss&quot;</p>"
           }
         ]
       },
@@ -701,7 +1515,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "filter",
-            "description": "<p>Facebook user Id in format of FB_USER_ID%3DX, where Id comes in place of X.</p>"
+            "description": "<p>Facebook user Id in format of FB_USER_ID%3DX, where Id comes in place of X</p>"
           }
         ]
       }
@@ -711,17 +1525,73 @@ define({ "api": [
         "Success 200": [
           {
             "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "resource",
+            "description": "<p>Route information</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "resource.ID",
+            "description": "<p>Id of route</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "resource.FB_USER_ID",
+            "description": "<p>Id of facebook user</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "resource.PATH",
+            "description": "<p>Path information</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "resource.PATH.id",
+            "description": "<p>Place Id</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "filter",
-            "description": "<p>FB_USER_ID%3D1</p>"
+            "field": "resource.PATH.name",
+            "description": "<p>Place name</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "resource.PATH.Longitude",
+            "description": "<p>coordinate Place Longitude coordinate</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "resource.PATH.Latitude",
+            "description": "<p>coordinate Place Latitude coordinate</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "resource.PATH.photo",
+            "description": "<p>URL of place photo</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Request body example:",
-          "content": "{\n    \"resource\":[\n      {\n        \t\"ID\": 1,\n       \t“FB_USER_ID”: 1,\n     \t\"PATH\": [\n\t\t\t{\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"name\": \"test1\",\n\t\t\t\t\"longitude\": 12.23,\n\t\t\t\t\"latitude\": 12.12,\n\t\t\t\t\"photo\": \"urlsomdasodmasodas\"\n\t\t\t}, {\n\t\t\t\t\"id\": 2,\n\t\t\t\t\"name\": \"test5\",\n\t\t\t\t\"longitude\": 12.23,\n\t\t\t\t\"latitude\": 12.12,\n\t\t\t\t\"photo\": \"urlsomdasodmasodas\"\n\t\t\t},\n\t\t\t(...)\n\t\t\t]\n     },\n        \"CREATED_ON\": \"data\"\n     }\n     ]\n}",
+          "content": "{\n    \"resource\":[\n      {\n        \t\"ID\": 1,\n       \t“FB_USER_ID”: 1,\n     \t\"PATH\": [\n\t\t\t{\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"name\": \"test1\",\n\t\t\t\t\"Longitude coordinate\": 12.23,\n\t\t\t\t\"Latitude coordinate\": 12.12,\n\t\t\t\t\"photo\": \"urlsomdasodmasodas\"\n\t\t\t}, {\n\t\t\t\t\"id\": 2,\n\t\t\t\t\"name\": \"test5\",\n\t\t\t\t\"Longitude coordinate\": 12.23,\n\t\t\t\t\"Latitude coordinate\": 12.12,\n\t\t\t\t\"photo\": \"urlsomdasodmasodas\"\n\t\t\t},\n\t\t\t(...)\n\t\t\t]\n     },\n        \"CREATED_ON\": \"data\"\n     }\n     ]\n}",
           "type": "json"
         }
       ]
@@ -744,40 +1614,93 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "Content",
-            "description": "<p>Content of a comment.</p>"
+            "description": "<p>Content of a comment</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "SCORE",
-            "description": "<p>Score.</p>"
+            "description": "<p>Score</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "PLACES_ID",
-            "description": "<p>Id of the place.</p>"
+            "description": "<p>Id of the place</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "TYPE",
-            "description": "<p>Place or namespace.</p>"
+            "description": "<p>Place or namespace</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "FB_USERS_ID",
-            "description": "<p>Id of facebook account.</p>"
+            "description": "<p>Id of facebook account</p>"
           }
         ]
       }
     },
     "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "comments",
+            "description": "<p>Array of comments</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "comments.CONTENT",
+            "description": "<p>Content of comment</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "comments.SCORE",
+            "description": "<p>Score</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "comments.PLACES_ID",
+            "description": "<p>Id of the place</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "comments.NAMESPACE_ID",
+            "description": "<p>Id of the namespace</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "comments.TYPE",
+            "description": "<p>Type , &quot;place&quot; or &quot;namespace&quot;</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "comments.FB_USERS_ID",
+            "description": "<p>Id of facebook user</p>"
+          }
+        ]
+      },
       "examples": [
         {
           "title": "Request body example for type = place:",

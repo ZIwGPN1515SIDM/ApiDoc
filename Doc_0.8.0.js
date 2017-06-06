@@ -3,7 +3,7 @@
  * @apiName GetPlace
  * @apiGroup Place
  * @apiVersion 0.8.0
- * @apiParam {String} type Type, place or namespace.
+ * @apiParam {String} type Type, "place" or "namespace".
  * @apiParam {String} namespace Name of the namespace.
  * @apiParam {String} place Name of the place.
  * @apiSuccess {Object} namespace Information about namespace
@@ -16,11 +16,11 @@
  * @apiSuccess {Number} namespace.COMMENTS_COUNT Total count of comments
  * @apiSuccess {String} namespace.GOOGLE_PLACE_ID Id on Google Places 
  * @apiSuccess {String} namespace.INSTANCE Instance
- * @apiSuccess {Number} namespace.LATITUDE Lattitude
- * @apiSuccess {Number} namespace.LONGITUDE Longitude
+ * @apiSuccess {Number} namespace.Latitude coordinate Lattitude
+ * @apiSuccess {Number} namespace.Longitude coordinate Longitude coordinate
  * @apiSuccess {String} namespace.NAME Name of the namespace
  * @apiSuccess {Number} namespace.CATEGORY_ID Id of the category
- * @apiSuccess {Number} namespace.OWNER_ID Owners Id
+ * @apiSuccess {Number} namespace.OWNER_ID Owner Id
  * @apiSuccess {Object} namespace.CATEGORY Category information
  * @apiSuccess {Number} namespace.CATEGORY.ID Id of the category
  * @apiSuccess {String} namespace.CATEGORY.NAME Name of the category
@@ -39,7 +39,7 @@
  * @apiSuccess {String} place.GOOGLE_PLACE_ID Id on Google Places 
  * @apiSuccess {String} place.INSTANCE Instance
  * @apiSuccess {Number} place.NAMESPACES_ID Id of the namespace
- * @apiSuccess {Number} namespace.OWNER_ID Owners Id
+ * @apiSuccess {Number} namespace.OWNER_ID Owner Id
  * @apiSuccess {Array} namespace.PLACES_PHOTOS Informations about photos related to the place
  * @apiSuccess {Number} namespace.PLACES_PHOTOS.ID Id of the place photo
  * @apiSuccess {String} namespace.PLACES_PHOTOS.URL URL of the photo
@@ -57,8 +57,8 @@
  *			"COMMENTS_COUNT": 0,
  *			"GOOGLE_PLACE_ID": null,
  *			"INSTANCE": "qwertyuiop",
- *			"LATITUDE": 0,
- *			"LONGITUDE": 0,
+ *			"Latitude coordinate": 0,
+ *			"Longitude coordinate": 0,
  *			"NAME": "12341234",
  *			"CATEGORY_ID": 2,
  *			"OWNER_ID": 1,
@@ -109,7 +109,7 @@
  * @apiName GetNamespace
  * @apiGroup Namespace
  * @apiVersion 0.8.0
- * @apiParam {String} type Type, place or namespace.
+ * @apiParam {String} type Type, "place" or "namespace".
  * @apiParam {String} namespace Name of the namespace.
  * @apiSuccess {Object} namespace Information about namespace
  * @apiSuccess {Number} namespace.ID Id of the namespac/place
@@ -121,11 +121,11 @@
  * @apiSuccess {Number} namespace.COMMENTS_COUNT Total count of comments
  * @apiSuccess {String} namespace.GOOGLE_PLACE_ID Id on Google Places 
  * @apiSuccess {String} namespace.INSTANCE Instance
- * @apiSuccess {Number} namespace.LATITUDE Lattitude
- * @apiSuccess {Number} namespace.LONGITUDE Longitude
+ * @apiSuccess {Number} namespace.Latitude coordinate Lattitude
+ * @apiSuccess {Number} namespace.Longitude coordinate Longitude coordinate
  * @apiSuccess {String} namespace.NAME Name of the namespace
  * @apiSuccess {Number} namespace.CATEGORY_ID Id of the category
- * @apiSuccess {Number} namespace.OWNER_ID Owners Id
+ * @apiSuccess {Number} namespace.OWNER_ID Owner Id
  * @apiSuccess {Object} namespace.CATEGORY Category information
  * @apiSuccess {Number} namespace.CATEGORY.ID Id of the category
  * @apiSuccess {String} namespace.CATEGORY.NAME Name of the category
@@ -146,8 +146,8 @@
  *			"COMMENTS_COUNT": 0,
  *			"GOOGLE_PLACE_ID": null,
  *			"INSTANCE": "qwertyuiop",
- *			"LATITUDE": 0,
- *			"LONGITUDE": 0,
+ *			"Latitude coordinate": 0,
+ *			"Longitude coordinate": 0,
  *			"NAME": "12341234",
  *			"CATEGORY_ID": 2,
  *			"OWNER_ID": 1,
@@ -189,11 +189,11 @@
  * @apiSuccess {Number} namespaces.COMMENTS_COUNT Total count of comments
  * @apiSuccess {String} namespaces.GOOGLE_PLACE_ID Id on Google Places 
  * @apiSuccess {String} namespaces.INSTANCE Instance
- * @apiSuccess {Number} namespaces.LATITUDE Lattitude
- * @apiSuccess {Number} namespaces.LONGITUDE Longitude
+ * @apiSuccess {Number} namespaces.Latitude coordinate Lattitude
+ * @apiSuccess {Number} namespaces.Longitude coordinate Longitude coordinate
  * @apiSuccess {String} namespaces.NAME Name
  * @apiSuccess {Number} namespaces.CATEGORY_ID Id of the category
- * @apiSuccess {Number} namespaces.OWNER_ID Owners Id
+ * @apiSuccess {Number} namespaces.OWNER_ID Owner Id
  * @apiSuccess {Object} namespaces.CATEGORY Category information
  * @apiSuccess {Number} namespaces.CATEGORY.ID Id of the category
  * @apiSuccess {String} namespaces.CATEGORY.NAME Name of the category
@@ -214,8 +214,8 @@
  *			"COMMENTS_COUNT": 0,
  *			"GOOGLE_PLACE_ID": null,
  *			"INSTANCE": "qwertyuiop",
- *			"LATITUDE": 0,
- *			"LONGITUDE": 0,
+ *			"Latitude coordinate": 0,
+ *			"Longitude coordinate": 0,
  *			"NAME": "12341234",
  *			"CATEGORY_ID": 2,
  *			"OWNER_ID": 1,
@@ -274,7 +274,7 @@
  * @apiName GetPlacesWithNamespace
  * @apiGroup Place
  * @apiVersion 0.8.0
- * @apiParam {String} type Type, place or namespace.
+ * @apiParam {String} type Type, "place" or "namespace".
  * @apiParam {Number} namespaceid Id of the namespace.
  * @apiParam {Number} [limit] Limit.
  * @apiParam {Number} [offset] Offset.
@@ -290,7 +290,7 @@
  * @apiSuccess {String} places.INSTANCE Instance
  * @apiSuccess {String} places.NAME Name
  * @apiSuccess {Number} places.NAMESPACES_ID Id of the namespace
- * @apiSuccess {Number} places.OWNER_ID Owners Id
+ * @apiSuccess {Number} places.OWNER_ID Owner Id
  * @apiSuccess {Array} places.PLACES_PHOTOS Informations about photos related to the place
  * @apiSuccess {Number} places.PLACES_PHOTOS.ID Id of the place photo
  * @apiSuccess {String} places.PLACES_PHOTOS.URL URL of the photo
@@ -331,18 +331,18 @@
  * @apiName GetEventsFromNamespace
  * @apiGroup Namespace
  * @apiVersion 0.8.0
- * @apiParam {String} type Type, place or namespace.
- * @apiParam {String} namespace Namespace name.
+ * @apiParam {String} type Type, "place" or "namespace"
+ * @apiParam {String} namespace Namespace name
  * @apiSuccess {Object} namespace Information about namespace
  * @apiSuccess {Number} namespace.ID Id of the place
  * @apiSuccess {String} namespace.NAME Name
  * @apiSuccess {String} namespace.EVENT_CONTENT Informations about events 
- * @apiSuccess {String} namespace.EVENT_END Information about event end
+ * @apiSuccess {String} namespace.EVENT_END Information about event ending
  * @apiSuccess {Array} places Information about places in the namespace
  * @apiSuccess {Number} places.ID Id of the place
  * @apiSuccess {String} places.NAME Name of the place
  * @apiSuccess {String} places.EVENT_CONTENT Informations about events 
- * @apiSuccess {String} places.EVENT_END Information about event end 
+ * @apiSuccess {String} places.EVENT_END Information about event ending 
  * @apiSuccessExample Response (success):
  *{
  *	"namespace": 
@@ -377,9 +377,9 @@
  * @apiGroup User
  * @apiVersion 0.8.0
  * @apiParam {Array} resource User data
- * @apiParam {String} resource.EMAIL E-mail adress.
- * @apiParam {String} resource.FB_ID Facebook Id.
- * @apiParam {String} resource.NAME Name and surname.
+ * @apiParam {String} resource.EMAIL E-mail adress
+ * @apiParam {String} resource.FB_ID Facebook Id
+ * @apiParam {String} resource.NAME Name and surname
  * @apiSuccess {Object} user Information about user
  * @apiSuccess {Number} user.ID User id
  * @apiSuccess {Boolean} user.NEWSLETTER Information about newsletter subscription
@@ -410,10 +410,10 @@
  * @apiName ChangeNewsletterInDatabase
  * @apiGroup User
  * @apiVersion 0.8.0
- * @apiParam {Array} recource User data.
- * @apiParam {Number} recource.ID User Id.
- * @apiParam {Boolean} recource.NEWSLETTER Newsletter status (true = newsletter is on).
- * @apiSuccess {String} success Information if update went successfully.
+ * @apiParam {Array} recource User data
+ * @apiParam {Number} recource.ID User Id
+ * @apiParam {Boolean} recource.NEWSLETTER Newsletter status (true = newsletter is on)
+ * @apiSuccess {String} success Information if update went successfully
  * @apiParamExample Request body example:
  *{
  *	"resource":[
@@ -436,16 +436,16 @@
  * @apiName GetComments
  * @apiGroup User
  * @apiVersion 0.8.0
- * @apiParam {String} type Type, place or namespace.
- * @apiParam {Number} id Id of name or namespace.
- * @apiSuccess {Array} comments Array of comments.
- * @apiSuccess {Number} comments.ID Id of the comment.
- * @apiSuccess {String} comments.CONTENT Comment content.
- * @apiSuccess {Number} comments.SCORE Score.
- * @apiSuccess {String} comments.TYPE Type (namespace, place)
- * @apiSuccess {Number} comments.NAMESPACES_ID Id of the namespace.
- * @apiSuccess {Number} comments PLACES_ID ID of the place.
- * @apiSuccess {Array} comments.FB_USERS_ID Id of facebook user.
+ * @apiParam {String} type Type, "place" or "namespace"
+ * @apiParam {Number} id Id of name or namespace
+ * @apiSuccess {Array} comments Array of comments
+ * @apiSuccess {Number} comments.ID Id of the comment
+ * @apiSuccess {String} comments.CONTENT Comment content
+ * @apiSuccess {Number} comments.SCORE Score
+ * @apiSuccess {String} comments.TYPE Type , "place" or "namespace"
+ * @apiSuccess {Number} comments.NAMESPACES_ID Id of the namespace
+ * @apiSuccess {Number} comments PLACES_ID ID of the place
+ * @apiSuccess {Array} comments.FB_USERS_ID Id of facebook user
  * @apiSuccessExample Response (success) for type = place:
  *{
  *	"comments": [
@@ -485,18 +485,18 @@
  * @apiName PostComments
  * @apiGroup User
  * @apiVersion 0.8.0
- * @apiParam {String} Content Content of a comment.
- * @apiParam {Number} SCORE Score.
- * @apiParam {Number} PLACES_ID Id of the place.
- * @apiParam {String} TYPE Place or namespace.
- * @apiParam {String} FB_USERS_ID Id of facebook account.
- * @apiSuccess {Array} comments Array of comments.
- * @apiSuccess {String} comments.CONTENT Content of comment.
- * @apiSuccess {Number} comments.SCORE Score.
- * @apiSuccess {Number} comments.PLACES_ID Id of the place.
- * @apiSuccess {Number} comments.NAMESPACE_ID Id of the namespace.
- * @apiSuccess {Number} comments.TYPE Type (namespace, place).
- * @apiSuccess {Number} comments.FB_USERS_ID Id of facebook user.
+ * @apiParam {String} Content Content of a comment
+ * @apiParam {Number} SCORE Score
+ * @apiParam {Number} PLACES_ID Id of the place
+ * @apiParam {String} TYPE Place or namespace
+ * @apiParam {String} FB_USERS_ID Id of facebook account
+ * @apiSuccess {Array} comments Array of comments
+ * @apiSuccess {String} comments.CONTENT Content of comment
+ * @apiSuccess {Number} comments.SCORE Score
+ * @apiSuccess {Number} comments.PLACES_ID Id of the place
+ * @apiSuccess {Number} comments.NAMESPACE_ID Id of the namespace
+ * @apiSuccess {Number} comments.TYPE Type , "place" or "namespace"
+ * @apiSuccess {Number} comments.FB_USERS_ID Id of facebook user
  * @apiSuccessExample Request body example for type = place:
  *{
  *	"comments": [
@@ -530,8 +530,16 @@
  * @apiName AddRoute
  * @apiGroup User
  * @apiVersion 0.8.0
- * @apiParam {Number} FB_USERS_ID User Id.
- * @apiParam {String} PATH Path.
+ * @apiParam {Number} FB_USERS_ID User Id
+ * @apiParam {String} PATH Path
+ * @apiSuccess {Array} resource Route information
+ * @apiSuccess {Number} resource.FB_USER_ID Id of facebook user
+ * @apiSuccess {Array} resource.PATH Path information
+ * @apiSuccess {Number} resource.PATH.id Place Id
+ * @apiSuccess {String} resource.PATH.name Place name
+ * @apiSuccess {Number} resource.PATH.Longitude coordinate Place Longitude coordinate
+ * @apiSuccess {Number} resource.PATH.Latitude coordinate Place Latitude coordinate
+ * @apiSuccess {String} resource.PATH.photo URL of place photo
  * @apiSuccessExample Request body example:
  * {
  *      "resource":[
@@ -541,14 +549,14 @@
  *			{
  *				"id": 1,
  *				"name": "test1",
- *				"longitude": 12.23,
- *				"latitude": 12.12,
+ *				"Longitude coordinate": 12.23,
+ *				"Latitude coordinate": 12.12,
  *				"photo": "urlsomdasodmasodas"
  *			}, {
  *				"id": 2,
  *				"name": "test5",
- *				"longitude": 12.23,
- *				"latitude": 12.12,
+ *				"Longitude coordinate": 12.23,
+ *				"Latitude coordinate": 12.12,
  *				"photo": "urlsomdasodmasodas"
  *			},
  *			(...)
@@ -563,14 +571,13 @@
  * @apiName GetRoute
  * @apiGroup User
  * @apiVersion 0.8.0
- * @apiParam {String} fields Fields.
- * @apiParam {String} filter Facebook user Id in format of FB_USER_ID%3DX, where Id comes in place of X.
- * @apiParam {Number} [limit] Limit.
- * @apiParam {Number} [offset] Offset.
- * @apiSuccess {String} fields ID%20%2CCREATED_ON
- * @apiSuccess {String} filter FB_USER_ID%3D1 
- * @apiSuccess {Number} limit 111
- * @apiSuccess {Number} offset 11
+ * @apiParam {String} fields Fields
+ * @apiParam {String} filter Facebook user Id in format of FB_USER_ID%3DX, where Id comes in place of X
+ * @apiParam {Number} [limit] Limit
+ * @apiParam {Number} [offset] Offset
+ * @apiSuccess {Array} resource Route information
+ * @apiSuccess {Number} resource.ID Route Id
+ * @apiSuccess {String} resource.CREATED_ON Route creation date in form "yyyy-mm-dd hh-mm-ss"
  * @apiSuccessExample Request body example:
  * {
  *     "resource":[
@@ -588,8 +595,16 @@
  * @apiName GetRouteData
  * @apiGroup User
  * @apiVersion 0.8.0
- * @apiParam {String} filter Facebook user Id in format of FB_USER_ID%3DX, where Id comes in place of X.
- * @apiSuccess {String} filter FB_USER_ID%3D1 
+ * @apiParam {String} filter Facebook user Id in format of FB_USER_ID%3DX, where Id comes in place of X
+ * @apiSuccess {Array} resource Route information
+ * @apiSuccess {Number} resource.ID Id of route
+ * @apiSuccess {Number} resource.FB_USER_ID Id of facebook user
+ * @apiSuccess {Array} resource.PATH Path information
+ * @apiSuccess {Number} resource.PATH.id Place Id
+ * @apiSuccess {String} resource.PATH.name Place name
+ * @apiSuccess {Number} resource.PATH.Longitude coordinate Place Longitude coordinate
+ * @apiSuccess {Number} resource.PATH.Latitude coordinate Place Latitude coordinate
+ * @apiSuccess {String} resource.PATH.photo URL of place photo
  * @apiSuccessExample Request body example:
  * {
  *     "resource":[
@@ -600,14 +615,14 @@
  *			{
  *				"id": 1,
  *				"name": "test1",
- *				"longitude": 12.23,
- *				"latitude": 12.12,
+ *				"Longitude coordinate": 12.23,
+ *				"Latitude coordinate": 12.12,
  *				"photo": "urlsomdasodmasodas"
  *			}, {
  *				"id": 2,
  *				"name": "test5",
- *				"longitude": 12.23,
- *				"latitude": 12.12,
+ *				"Longitude coordinate": 12.23,
+ *				"Latitude coordinate": 12.12,
  *				"photo": "urlsomdasodmasodas"
  *			},
  *			(...)
