@@ -6,27 +6,44 @@
  * @apiParam {String} type Type, place or namespace.
  * @apiParam {String} namespace Name of the namespace.
  * @apiParam {String} place Name of the place.
- * @apiSuccess {Number} ID Id of the namespac/place
- * @apiSuccess {String} DESCRIPTION Description of the namespace/place
- * @apiSuccess {String} ADVERT Advert information
- * @apiSuccess {String} EVENT_CONTENT Informations about events 
- * @apiSuccess {String} ADDED_ON Date added inf form "yyyy-mm-dd hh-mm-ss"
- * @apiSuccess {Number} SUM_SCORE Sum score
- * @apiSuccess {Number} COMMENTS_COUNT Total count of comments
- * @apiSuccess {String} GOOGLE_PLACE_ID Id on Google Places 
- * @apiSuccess {String} INSTANCE Instance
- * @apiSuccess {Number} LATITUDE Lattitude
- * @apiSuccess {Number} LONGITUDE Longitude
- * @apiSuccess {String} NAME Name of the namespace/place
- * @apiSuccess {Number} CATEGORY_ID Id of the category
- * @apiSuccess {Number} OWNER_ID Owners Id
- * @apiSuccess {Object} CATEGORY Category information
- * @apiSuccess {Number} CATEGORY.ID Id of the category
- * @apiSuccess {String} CATEGORY.NAME Name of the category
- * @apiSuccess {Array} NAMESPACES_PHOTOS Informations about photos related to the namespace/place
- * @apiSuccess {Number} NAMESPACES_PHOTOS.ID Id of the namespace/place photo
- * @apiSuccess {String} NAMESPACES_PHOTOS.URL URL of the photo
- * @apiSuccess {Number} NAMESPACES_PHOTOS.NAMESPACES_ID Id of the namespace/place
+ * @apiSuccess {Object} namespace Information about namespace
+ * @apiSuccess {Number} namespace.ID Id of the namespac
+ * @apiSuccess {String} namespace.DESCRIPTION Description of the namespace
+ * @apiSuccess {String} namespace.ADVERT Advert information
+ * @apiSuccess {String} namespace.EVENT_CONTENT Informations about events 
+ * @apiSuccess {String} namespace.ADDED_ON Date added in form "yyyy-mm-dd hh-mm-ss"
+ * @apiSuccess {Number} namespace.SUM_SCORE Sum score
+ * @apiSuccess {Number} namespace.COMMENTS_COUNT Total count of comments
+ * @apiSuccess {String} namespace.GOOGLE_PLACE_ID Id on Google Places 
+ * @apiSuccess {String} namespace.INSTANCE Instance
+ * @apiSuccess {Number} namespace.LATITUDE Lattitude
+ * @apiSuccess {Number} namespace.LONGITUDE Longitude
+ * @apiSuccess {String} namespace.NAME Name of the namespace
+ * @apiSuccess {Number} namespace.CATEGORY_ID Id of the category
+ * @apiSuccess {Number} namespace.OWNER_ID Owners Id
+ * @apiSuccess {Object} namespace.CATEGORY Category information
+ * @apiSuccess {Number} namespace.CATEGORY.ID Id of the category
+ * @apiSuccess {String} namespace.CATEGORY.NAME Name of the category
+ * @apiSuccess {Array} namespace.NAMESPACES_PHOTOS Informations about photos related to the namespace
+ * @apiSuccess {Number} namespace.NAMESPACES_PHOTOS.ID Id of the namespace photo
+ * @apiSuccess {String} namespace.NAMESPACES_PHOTOS.URL URL of the photo
+ * @apiSuccess {Number} namespace.NAMESPACES_PHOTOS.NAMESPACES_ID Id of the namespace
+ * @apiSuccess {Object} place Information about place
+ * @apiSuccess {Number} place.ID Id of the namespac/place
+ * @apiSuccess {String} place.DESCRIPTION Description of the place
+ * @apiSuccess {String} place.ADVERT Advert information
+ * @apiSuccess {String} place.EVENT_CONTENT Informations about events 
+ * @apiSuccess {String} place.ADDED_ON Date added in form "yyyy-mm-dd hh-mm-ss"
+ * @apiSuccess {Number} place.SUM_SCORE Sum score
+ * @apiSuccess {Number} place.COMMENTS_COUNT Total count of comments
+ * @apiSuccess {String} place.GOOGLE_PLACE_ID Id on Google Places 
+ * @apiSuccess {String} place.INSTANCE Instance
+ * @apiSuccess {Number} place.NAMESPACES_ID Id of the namespace
+ * @apiSuccess {Number} namespace.OWNER_ID Owners Id
+ * @apiSuccess {Array} namespace.PLACES_PHOTOS Informations about photos related to the place
+ * @apiSuccess {Number} namespace.PLACES_PHOTOS.ID Id of the place photo
+ * @apiSuccess {String} namespace.PLACES_PHOTOS.URL URL of the photo
+ * @apiSuccess {Number} namespace.PLACES_PHOTOS.NAMESPACES_ID Id of the place
  * @apiSuccessExample Response (success):
  *{
  *	"namespace": 
@@ -94,27 +111,28 @@
  * @apiVersion 0.8.0
  * @apiParam {String} type Type, place or namespace.
  * @apiParam {String} namespace Name of the namespace.
- * @apiSuccess {Number} ID Id of the namespac/place
- * @apiSuccess {String} DESCRIPTION Description of the namespace
- * @apiSuccess {String} ADVERT Advert information
- * @apiSuccess {String} EVENT_CONTENT Informations about events 
- * @apiSuccess {String} ADDED_ON Date added inf form "yyyy-mm-dd hh-mm-ss"
- * @apiSuccess {Number} SUM_SCORE Sum score
- * @apiSuccess {Number} COMMENTS_COUNT Total count of comments
- * @apiSuccess {String} GOOGLE_PLACE_ID Id on Google Places 
- * @apiSuccess {String} INSTANCE Instance
- * @apiSuccess {Number} LATITUDE Lattitude
- * @apiSuccess {Number} LONGITUDE Longitude
- * @apiSuccess {String} NAME Name of the namespace
- * @apiSuccess {Number} CATEGORY_ID Id of the category
- * @apiSuccess {Number} OWNER_ID Owners Id
- * @apiSuccess {Object} CATEGORY Category information
- * @apiSuccess {Number} CATEGORY.ID Id of the category
- * @apiSuccess {String} CATEGORY.NAME Name of the category
- * @apiSuccess {Array} NAMESPACES_PHOTOS Informations about photos related to the namespace
- * @apiSuccess {Number} NAMESPACES_PHOTOS.ID Id of the namespace photo
- * @apiSuccess {String} NAMESPACES_PHOTOS.URL URL of the photo
- * @apiSuccess {Number} NAMESPACES_PHOTOS.NAMESPACES_ID Id of the namespace
+ * @apiSuccess {Object} namespace Information about namespace
+ * @apiSuccess {Number} namespace.ID Id of the namespac/place
+ * @apiSuccess {String} namespace.DESCRIPTION Description of the namespace
+ * @apiSuccess {String} namespace.ADVERT Advert information
+ * @apiSuccess {String} namespace.EVENT_CONTENT Informations about events 
+ * @apiSuccess {String} namespace.ADDED_ON Date added in form "yyyy-mm-dd hh-mm-ss"
+ * @apiSuccess {Number} namespace.SUM_SCORE Sum score
+ * @apiSuccess {Number} namespace.COMMENTS_COUNT Total count of comments
+ * @apiSuccess {String} namespace.GOOGLE_PLACE_ID Id on Google Places 
+ * @apiSuccess {String} namespace.INSTANCE Instance
+ * @apiSuccess {Number} namespace.LATITUDE Lattitude
+ * @apiSuccess {Number} namespace.LONGITUDE Longitude
+ * @apiSuccess {String} namespace.NAME Name of the namespace
+ * @apiSuccess {Number} namespace.CATEGORY_ID Id of the category
+ * @apiSuccess {Number} namespace.OWNER_ID Owners Id
+ * @apiSuccess {Object} namespace.CATEGORY Category information
+ * @apiSuccess {Number} namespace.CATEGORY.ID Id of the category
+ * @apiSuccess {String} namespace.CATEGORY.NAME Name of the category
+ * @apiSuccess {Array} namespace.NAMESPACES_PHOTOS Informations about photos related to the namespace
+ * @apiSuccess {Number} namespace.NAMESPACES_PHOTOS.ID Id of the namespace photo
+ * @apiSuccess {String} namespace.NAMESPACES_PHOTOS.URL URL of the photo
+ * @apiSuccess {Number} namespace.NAMESPACES_PHOTOS.NAMESPACES_ID Id of the namespace
  * @apiSuccessExample Response (success):
  * {
  *	"namespace": 
@@ -157,31 +175,32 @@
  * @apiName GetNamespaceWithCategory
  * @apiGroup Namespace
  * @apiVersion 0.8.0
- * @apiParam {String} type Type, place or namespace.
+ * @apiParam {String} type Type, namespace.
  * @apiParam {Number} category Id of the category.
  * @apiParam {Number} [limit] Limit.
  * @apiParam {Number} [offset] Offset.
- * @apiSuccess {Number} ID Id of the namespac/place
- * @apiSuccess {String} DESCRIPTION Description of the namespace
- * @apiSuccess {String} ADVERT Advert information
- * @apiSuccess {String} EVENT_CONTENT Informations about events 
- * @apiSuccess {String} ADDED_ON Date added inf form "yyyy-mm-dd hh-mm-ss"
- * @apiSuccess {Number} SUM_SCORE Sum score
- * @apiSuccess {Number} COMMENTS_COUNT Total count of comments
- * @apiSuccess {String} GOOGLE_PLACE_ID Id on Google Places 
- * @apiSuccess {String} INSTANCE Instance
- * @apiSuccess {Number} LATITUDE Lattitude
- * @apiSuccess {Number} LONGITUDE Longitude
- * @apiSuccess {String} NAME Name
- * @apiSuccess {Number} CATEGORY_ID Id of the category
- * @apiSuccess {Number} OWNER_ID Owners Id
- * @apiSuccess {Object} CATEGORY Category information
- * @apiSuccess {Number} CATEGORY.ID Id of the category
- * @apiSuccess {String} CATEGORY.NAME Name of the category
- * @apiSuccess {Array} NAMESPACES_PHOTOS Informations about photos related to the namespace
- * @apiSuccess {Number} NAMESPACES_PHOTOS.ID Id of the namespace photo
- * @apiSuccess {String} NAMESPACES_PHOTOS.URL URL of the photo
- * @apiSuccess {Number} NAMESPACES_PHOTOS.NAMESPACES_ID Id of the namespace
+ * @apiSuccess {Array} namespaces Array of namespaces matching category
+ * @apiSuccess {Number} namespaces.ID Id of the namespac
+ * @apiSuccess {String} namespaces.DESCRIPTION Description of the namespace
+ * @apiSuccess {String} namespaces.ADVERT Advert information
+ * @apiSuccess {String} namespaces.EVENT_CONTENT Informations about events 
+ * @apiSuccess {String} namespaces.ADDED_ON Date added in form "yyyy-mm-dd hh-mm-ss"
+ * @apiSuccess {Number} namespaces.SUM_SCORE Sum score
+ * @apiSuccess {Number} namespaces.COMMENTS_COUNT Total count of comments
+ * @apiSuccess {String} namespaces.GOOGLE_PLACE_ID Id on Google Places 
+ * @apiSuccess {String} namespaces.INSTANCE Instance
+ * @apiSuccess {Number} namespaces.LATITUDE Lattitude
+ * @apiSuccess {Number} namespaces.LONGITUDE Longitude
+ * @apiSuccess {String} namespaces.NAME Name
+ * @apiSuccess {Number} namespaces.CATEGORY_ID Id of the category
+ * @apiSuccess {Number} namespaces.OWNER_ID Owners Id
+ * @apiSuccess {Object} namespaces.CATEGORY Category information
+ * @apiSuccess {Number} namespaces.CATEGORY.ID Id of the category
+ * @apiSuccess {String} namespaces.CATEGORY.NAME Name of the category
+ * @apiSuccess {Array} namespaces.NAMESPACES_PHOTOS Informations about photos related to the namespace
+ * @apiSuccess {Number} namespaces.NAMESPACES_PHOTOS.ID Id of the namespace photo
+ * @apiSuccess {String} namespaces.NAMESPACES_PHOTOS.URL URL of the photo
+ * @apiSuccess {Number} namespaces.NAMESPACES_PHOTOS.NAMESPACES_ID Id of the namespace
  * @apiSuccessExample Response (success):
  * {
  *	"namespaces": [  
@@ -227,8 +246,8 @@
  * @apiGroup Namespace
  * @apiVersion 0.8.0
  * @apiSuccess {Array} categories Categories
- * @apiSuccess {Number} ID Id of the category
- * @apiSuccess {String} NAME Name of the category
+ * @apiSuccess {Number} categories.ID Id of the category
+ * @apiSuccess {String} categories.NAME Name of the category
  * @apiSuccessExample Response (success):
  *{
  *	"categories": [
@@ -264,7 +283,7 @@
  * @apiSuccess {String} places.DESCRIPTION Description of the place
  * @apiSuccess {String} places.ADVERT Advert information
  * @apiSuccess {String} places.EVENT_CONTENT Informations about events 
- * @apiSuccess {String} places.ADDED_ON Date added inf form "yyyy-mm-dd hh-mm-ss"
+ * @apiSuccess {String} places.ADDED_ON Date added in form "yyyy-mm-dd hh-mm-ss"
  * @apiSuccess {Number} places.SUM_SCORE Sum score
  * @apiSuccess {Number} places.COMMENTS_COUNT Total count of comments
  * @apiSuccess {String} places.GOOGLE_PLACE_ID Id on Google Places 
@@ -316,21 +335,14 @@
  * @apiParam {String} namespace Namespace name.
  * @apiSuccess {Object} namespace Information about namespace
  * @apiSuccess {Number} namespace.ID Id of the place
- * @apiSuccess {String} DESCRIPTION Description of the place
- * @apiSuccess {String} ADVERT Advert information
- * @apiSuccess {String} EVENT_CONTENT Informations about events 
- * @apiSuccess {String} ADDED_ON Date added inf form "yyyy-mm-dd hh-mm-ss"
- * @apiSuccess {Number} SUM_SCORE Sum score
- * @apiSuccess {Number} COMMENTS_COUNT Total count of comments
- * @apiSuccess {String} GOOGLE_PLACE_ID Id on Google Places 
- * @apiSuccess {String} INSTANCE Instance
- * @apiSuccess {String} NAME Name
- * @apiSuccess {Number} NAMESPACES_ID Id of the namespace
- * @apiSuccess {Number} OWNER_ID Owners Id
- * @apiSuccess {Array} PLACES_PHOTOS Informations about photos related to the place
- * @apiSuccess {Number} PLACES_PHOTOS.ID Id of the place photo
- * @apiSuccess {String} PLACES_PHOTOS.URL URL of the photo
- * @apiSuccess {Number} PLACES_PHOTOS.PLACE_ID Id of the place
+ * @apiSuccess {String} namespace.NAME Name
+ * @apiSuccess {String} namespace.EVENT_CONTENT Informations about events 
+ * @apiSuccess {String} namespace.EVENT_END Information about event end
+ * @apiSuccess {Array} places Information about places in the namespace
+ * @apiSuccess {Number} places.ID Id of the place
+ * @apiSuccess {String} places.NAME Name of the place
+ * @apiSuccess {String} places.EVENT_CONTENT Informations about events 
+ * @apiSuccess {String} places.EVENT_END Information about event end 
  * @apiSuccessExample Response (success):
  *{
  *	"namespace": 
@@ -364,9 +376,13 @@
  * @apiName GetPostIdFromToDatabase
  * @apiGroup User
  * @apiVersion 0.8.0
- * @apiParam {String} EMAIL E-mail adress.
- * @apiParam {String} FB_ID Facebook Id.
- * @apiParam {String} NAME Name and surname.
+ * @apiParam {Array} resource User data
+ * @apiParam {String} resource.EMAIL E-mail adress.
+ * @apiParam {String} resource.FB_ID Facebook Id.
+ * @apiParam {String} resource.NAME Name and surname.
+ * @apiSuccess {Object} user Information about user
+ * @apiSuccess {Number} user.ID User id
+ * @apiSuccess {Boolean} user.NEWSLETTER Information about newsletter subscription
  * @apiParamExample Request body example:
  *{
  *	"resource":[
@@ -394,8 +410,10 @@
  * @apiName ChangeNewsletterInDatabase
  * @apiGroup User
  * @apiVersion 0.8.0
- * @apiParam {Number} ID User Id.
- * @apiParam {Boolean} NEWSLETTER Newsletter status (true = newsletter is on).
+ * @apiParam {Array} recource User data.
+ * @apiParam {Number} recource.ID User Id.
+ * @apiParam {Boolean} recource.NEWSLETTER Newsletter status (true = newsletter is on).
+ * @apiSuccess {String} success Information if update went successfully.
  * @apiParamExample Request body example:
  *{
  *	"resource":[
@@ -420,8 +438,14 @@
  * @apiVersion 0.8.0
  * @apiParam {String} type Type, place or namespace.
  * @apiParam {Number} id Id of name or namespace.
- * @apiSuccess {String} type place/namespace
- * @apiSuccess {Number} id 4
+ * @apiSuccess {Array} comments Array of comments.
+ * @apiSuccess {Number} comments.ID Id of the comment.
+ * @apiSuccess {String} comments.CONTENT Comment content.
+ * @apiSuccess {Number} comments.SCORE Score.
+ * @apiSuccess {String} comments.TYPE Type (namespace, place)
+ * @apiSuccess {Number} comments.NAMESPACES_ID Id of the namespace.
+ * @apiSuccess {Number} comments PLACES_ID ID of the place.
+ * @apiSuccess {Array} comments.FB_USERS_ID Id of facebook user.
  * @apiSuccessExample Response (success) for type = place:
  *{
  *	"comments": [
@@ -466,6 +490,13 @@
  * @apiParam {Number} PLACES_ID Id of the place.
  * @apiParam {String} TYPE Place or namespace.
  * @apiParam {String} FB_USERS_ID Id of facebook account.
+ * @apiSuccess {Array} comments Array of comments.
+ * @apiSuccess {String} comments.CONTENT Content of comment.
+ * @apiSuccess {Number} comments.SCORE Score.
+ * @apiSuccess {Number} comments.PLACES_ID Id of the place.
+ * @apiSuccess {Number} comments.NAMESPACE_ID Id of the namespace.
+ * @apiSuccess {Number} comments.TYPE Type (namespace, place).
+ * @apiSuccess {Number} comments.FB_USERS_ID Id of facebook user.
  * @apiSuccessExample Request body example for type = place:
  *{
  *	"comments": [
