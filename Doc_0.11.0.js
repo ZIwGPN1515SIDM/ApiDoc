@@ -612,9 +612,7 @@
  * @apiSuccess {Number} resource.ID Id of route
  * @apiSuccess {Number} resource.FB_USER_ID Id of facebook user
  * @apiSuccess {String} resource.NAME Name of route
- * @apiSuccess {Array} resource.PATH Path information
- * @apiSuccess {Number} resource.PATH.id Place Id
- * @apiSuccess {String} resource.PATH.name Place name
+ * @apiSuccess {String} resource.PATH Path of the route in form of array with objects with id (as Number) and name (as String)
  * @apiSuccessExample Request body example:
  * {
  *     "resource":[
@@ -622,18 +620,8 @@
  *         	"ID": 1,
  *        	"FB_USER_ID": 1,
  * 			"NAME": "Asdasdsa",
- *      	"PATH": [
- *			{
- *				"id": 1,
- *				"name": "test1"
- *			}, {
- *				"id": 2,
- *				"name": "test5"
- *			},
- *			(...)
- *			]
- *      },
- *         "CREATED_ON": "data"
+ *      	"PATH": "asdasd",
+ *          "CREATED_ON": "data"
  *      }
  *      ]
  * }

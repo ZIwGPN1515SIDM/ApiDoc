@@ -1733,31 +1733,17 @@
           },
           {
             "group": "Success 200",
-            "type": "Array",
-            "optional": false,
-            "field": "resource.PATH",
-            "description": "<p>Path information</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "resource.PATH.id",
-            "description": "<p>Place Id</p>"
-          },
-          {
-            "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "resource.PATH.name",
-            "description": "<p>Place name</p>"
+            "field": "resource.PATH",
+            "description": "<p>Path of the route in form of array with objects with id (as Number) and name (as String)</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Request body example:",
-          "content": "{\n    \"resource\":[\n      {\n        \t\"ID\": 1,\n       \t\"FB_USER_ID\": 1,\n\t\t\t\"NAME\": \"Asdasdsa\",\n     \t\"PATH\": [\n\t\t\t{\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"name\": \"test1\"\n\t\t\t}, {\n\t\t\t\t\"id\": 2,\n\t\t\t\t\"name\": \"test5\"\n\t\t\t},\n\t\t\t(...)\n\t\t\t]\n     },\n        \"CREATED_ON\": \"data\"\n     }\n     ]\n}",
+          "content": "{\n    \"resource\":[\n      {\n        \t\"ID\": 1,\n       \t\"FB_USER_ID\": 1,\n\t\t\t\"NAME\": \"Asdasdsa\",\n     \t\"PATH\": \"asdasd\",\n         \"CREATED_ON\": \"data\"\n     }\n     ]\n}",
           "type": "json"
         }
       ]
